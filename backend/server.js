@@ -1,0 +1,4 @@
+require('dotenv').config();const express=require('express');const cors=require('cors');const path=require('path');const connectDB=require('./db');const errorHandler=require('./middleware/error');
+const app=express();app.use(cors({origin:true,credentials:false}));app.use(express.json({limit:'1mb'}));
+app.get('/api/health',(req,res)=>res.json({ok:true,service:'Amour Hotel API'}));app.use('/api/users',require('./routes/userRoutes'));app.use('/api/rooms',require('./routes/roomRoutes'));app.use('/api/bookings',require('./routes/bookingRoutes'));app.use('/api/payments',require('./routes/paymentRoutes'));app.use('/api/admin',require('./routes/adminRoutes'));app.use('/api/emails',require('./routes/emailRoutes'));app.use(errorHandler);
+const PORT=process.env.PORT||5002;connectDB().then(()=>app.listen(PORT,()=>console.log(`Server running on http://localhost:${PORT}`))).catch(e=>{console.error('MongoDB connection failed:',e.message);process.exit(1)});

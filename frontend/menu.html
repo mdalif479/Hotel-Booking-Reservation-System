@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Menu | Amour Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .menu-hero {
+            height: 60vh;
+            background: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4")
+            center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .menu-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .menu-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-content h1 {
+            font-size: 50px;
+        }
+
+        .menu-section {
+            padding: 80px 10%;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .menu-card .info {
+            padding: 20px;
+        }
+
+        .price {
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container nav-container">
+
+        <div class="logo">AMOUR HOTEL</div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="menu-hero">
+
+    <div class="menu-overlay"></div>
+
+    <div class="menu-content">
+        <h1>Amour Restaurant Menu</h1>
+        <p>Luxury dining crafted by world-class chefs</p>
+    </div>
+
+</section>
+
+<!-- MENU ITEMS -->
+<section class="menu-section">
+
+    <div class="menu-grid">
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2">
+            <div class="info">
+                <h3>Breakfast Combo</h3>
+                <p>Eggs, toast, juice & fruits</p>
+                <p class="price">$12</p>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+            <div class="info">
+                <h3>Grilled Chicken</h3>
+                <p>Served with vegetables</p>
+                <p class="price">$18</p>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
+            <div class="info">
+                <h3>Beef Steak</h3>
+                <p>Premium grilled steak</p>
+                <p class="price">$35</p>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c9b6e">
+            <div class="info">
+                <h3>Mojito Drink</h3>
+                <p>Mint & lime refreshment</p>
+                <p class="price">$8</p>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352">
+            <div class="info">
+                <h3>Pancakes</h3>
+                <p>Honey & syrup topping</p>
+                <p class="price">$10</p>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+            <div class="info">
+                <h3>Seafood Platter</h3>
+                <p>Fresh ocean selection</p>
+                <p class="price">$40</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Reserve a Table Today</h2>
+        <a href="booking.html" class="hero-btn">Book Now</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <h3>Amour Hotel</h3>
+        <p>Luxury Dining Experience</p>
+        <p>© 2026 Amour Hotel</p>
+    </div>
+</footer>
+
+</body>
+</html>

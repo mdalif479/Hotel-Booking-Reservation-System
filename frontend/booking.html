@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay | Amour Hotel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container nav-container">
+
+        <div class="logo">
+            AMOUR HOTEL
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        <a href="my-bookings.html">My Bookings</a></nav>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" style="
+height:60vh;
+background:url('https://images.unsplash.com/photo-1566073771259-6a8506099945')
+center/cover no-repeat;
+">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Reserve Your Stay</h1>
+        <p>
+            Luxury accommodation tailored to your needs
+        </p>
+    </div>
+
+</section>
+
+<!-- BOOKING SECTION -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Booking Form</h2>
+        </div>
+
+        <div
+            style="
+            display:grid;
+            grid-template-columns:2fr 1fr;
+            gap:40px;
+            align-items:start;
+            "
+            class="booking-layout">
+
+            <!-- BOOKING FORM -->
+
+            <div
+                style="
+                background:#fff;
+                padding:30px;
+                border-radius:12px;
+                box-shadow:0 5px 20px rgba(0,0,0,.08);
+                ">
+
+                <form id="bookingForm">
+
+                    <h3 style="margin-bottom:20px;">
+                        Guest Information
+                    </h3>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Full Name"
+                        required
+                        style="width:100%;padding:12px;margin-bottom:15px;"
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email Address"
+                        required
+                        style="width:100%;padding:12px;margin-bottom:15px;"
+                    >
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Phone Number"
+                        required
+                        style="width:100%;padding:12px;margin-bottom:15px;"
+                    >
+
+                    <h3 style="margin:25px 0 15px;">
+                        Reservation Details
+                    </h3>
+
+                    <label>
+                        Check-In
+                    </label>
+
+                    <input
+                        type="date"
+                        id="checkIn"
+                        required
+                        style="width:100%;padding:12px;margin-bottom:15px;"
+                    >
+
+                    <label>
+                        Check-Out
+                    </label>
+
+                    <input
+                        type="date"
+                        id="checkOut"
+                        required
+                        style="width:100%;padding:12px;margin-bottom:15px;"
+                    >
+
+                    <label>
+                        Room Type
+                    </label>
+
+                    <select
+                        id="roomType"
+                        style="width:100%;padding:12px;margin-bottom:15px;"
+                    >
+                        <option value="120">
+                            Standard Room - $120
+                        </option>
+
+                        <option value="180">
+                            Deluxe Room - $180
+                        </option>
+
+                        <option value="280">
+                            Executive Suite - $280
+                        </option>
+
+                        <option value="350">
+                            Family Suite - $350
+                        </option>
+
+                        <option value="650">
+                            Presidential Suite - $650
+                        </option>
+                    </select>
+
+                    <label>
+                        Number Of Guests
+                    </label>
+
+                    <select
+                        id="guestCount"
+                        style="width:100%;padding:12px;margin-bottom:15px;"
+                    >
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+
+                    <label>
+                        Special Requests
+                    </label>
+
+                    <textarea
+                        id="specialRequest"
+                        rows="5"
+                        placeholder="Tell us anything you'd like..."
+                        style="width:100%;padding:12px;margin-bottom:15px;"
+                    ></textarea>
+
+                    <h3 style="margin-bottom:15px;">
+                        Payment Method
+                    </h3>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="payment"
+                            checked
+                        >
+                        Credit Card
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="payment"
+                        >
+                        Debit Card
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="payment"
+                        >
+                        PayPal
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+                        I agree to the Terms & Conditions
+                    </label>
+
+                    <br><br>
+
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                    >
+                        Confirm Reservation
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- SUMMARY -->
+
+            <div
+                style="
+                background:#111;
+                color:white;
+                padding:30px;
+                border-radius:12px;
+                ">
+
+                <h3 style="margin-bottom:20px;">
+                    Booking Summary
+                </h3>
+
+                <p>
+                    Room Rate:
+                </p>
+
+                <h2
+                    id="roomPrice"
+                    style="color:#d4af37;"
+                >
+                    $120
+                </h2>
+
+                <hr style="margin:20px 0;">
+
+                <p>
+                    Estimated Total:
+                </p>
+
+                <h2
+                    id="totalPrice"
+                    style="color:#d4af37;"
+                >
+                    $120
+                </h2>
+
+                <hr style="margin:20px 0;">
+
+                <h4>
+                    Included:
+                </h4>
+
+                <ul style="margin-top:15px;">
+
+                    <li>✔ Free WiFi</li>
+                    <li>✔ Breakfast</li>
+                    <li>✔ Pool Access</li>
+                    <li>✔ Gym Access</li>
+                    <li>✔ Parking</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Need Assistance?
+        </h2>
+
+        <p style="color:white;margin:20px 0;">
+            Our reservation team is available 24/7.
+        </p>
+
+        <a href="tel:+8801234567890"
+           class="hero-btn">
+            Call Now
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <h3>Amour Hotel</h3>
+
+        <p>
+            Luxury Hospitality & Exceptional Service
+        </p>
+
+        <p>
+            info@amourhotel.com
+        </p>
+
+        <p>
+            +880 1234 567890
+        </p>
+
+        <p>
+            © 2026 Amour Hotel
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/emailjs-config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/booking.js"></script>
+
+</body>
+</html>

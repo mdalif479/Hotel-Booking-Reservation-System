@@ -1,0 +1,1 @@
+const router=require('express').Router();const c=require('../controllers/paymentController');const {protect,authorize}=require('../middleware/auth');router.post('/demo/:bookingId',protect,c.demoPay);router.get('/mine',protect,c.mine);router.get('/',protect,authorize('admin','superuser'),c.all);module.exports=router;

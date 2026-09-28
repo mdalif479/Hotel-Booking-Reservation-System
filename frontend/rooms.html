@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suites | Amour Hotel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="container nav-container">
+
+            <div class="logo">
+                AMOUR HOTEL
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            <a href="my-bookings.html">My Bookings</a></nav>
+
+        </div>
+
+    </header>
+
+    <!-- PAGE HERO -->
+
+    <section class="hero" style="
+        height:70vh;
+        background:url('https://images.unsplash.com/photo-1566073771259-6a8506099945')
+        center/cover no-repeat;
+    ">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>Rooms & Suites</h1>
+            <p>
+                Choose from our luxury accommodations
+            </p>
+        </div>
+
+    </section>
+
+    <!-- FILTER SECTION -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Find Your Perfect Room</h2>
+            </div>
+
+            <div
+                style="
+                display:flex;
+                justify-content:center;
+                gap:15px;
+                flex-wrap:wrap;
+                margin-bottom:50px;"
+            >
+
+                <select id="roomFilter"
+                    style="
+                    padding:12px;
+                    min-width:250px;">
+                    <option value="all">
+                        All Rooms
+                    </option>
+                    <option value="standard">
+                        Standard
+                    </option>
+                    <option value="deluxe">
+                        Deluxe
+                    </option>
+                    <option value="suite">
+                        Suite
+                    </option>
+                </select>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ROOM LIST -->
+
+    <section class="rooms section">
+
+        <div class="container">
+
+            <div class="room-grid">
+
+                <!-- ROOM 1 -->
+
+                <div class="room-card standard">
+
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+
+                    <div class="room-content">
+
+                        <h3>Standard Room</h3>
+
+                        <p>
+                            Comfortable accommodation with
+                            modern amenities.
+                        </p>
+
+                        <ul>
+                            <li>✔ Free WiFi</li>
+                            <li>✔ Smart TV</li>
+                            <li>✔ City View</li>
+                        </ul>
+
+                        <br>
+
+                        <span>$120 / Night</span>
+
+                        <br><br>
+
+                        <a href="booking.html"
+                           class="btn-primary">
+                            Book Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- ROOM 2 -->
+
+                <div class="room-card deluxe">
+
+                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461">
+
+                    <div class="room-content">
+
+                        <h3>Deluxe Room</h3>
+
+                        <p>
+                            Elegant room designed for luxury
+                            and comfort.
+                        </p>
+
+                        <ul>
+                            <li>✔ King Bed</li>
+                            <li>✔ Mini Bar</li>
+                            <li>✔ Pool View</li>
+                        </ul>
+
+                        <br>
+
+                        <span>$180 / Night</span>
+
+                        <br><br>
+
+                        <a href="booking.html"
+                           class="btn-primary">
+                            Book Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- ROOM 3 -->
+
+                <div class="room-card suite">
+
+                    <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c">
+
+                    <div class="room-content">
+
+                        <h3>Executive Suite</h3>
+
+                        <p>
+                            Spacious suite perfect for
+                            business travelers.
+                        </p>
+
+                        <ul>
+                            <li>✔ Lounge Access</li>
+                            <li>✔ Office Desk</li>
+                            <li>✔ Luxury Bathroom</li>
+                        </ul>
+
+                        <br>
+
+                        <span>$280 / Night</span>
+
+                        <br><br>
+
+                        <a href="booking.html"
+                           class="btn-primary">
+                            Book Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- ROOM 4 -->
+
+                <div class="room-card deluxe">
+
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
+
+                    <div class="room-content">
+
+                        <h3>Premium Deluxe</h3>
+
+                        <p>
+                            Beautiful luxury room with
+                            upgraded facilities.
+                        </p>
+
+                        <ul>
+                            <li>✔ King Bed</li>
+                            <li>✔ Coffee Machine</li>
+                            <li>✔ Balcony</li>
+                        </ul>
+
+                        <br>
+
+                        <span>$220 / Night</span>
+
+                        <br><br>
+
+                        <a href="booking.html"
+                           class="btn-primary">
+                            Book Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- ROOM 5 -->
+
+                <div class="room-card suite">
+
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
+
+                    <div class="room-content">
+
+                        <h3>Family Suite</h3>
+
+                        <p>
+                            Perfect choice for families
+                            seeking comfort.
+                        </p>
+
+                        <ul>
+                            <li>✔ 2 Bedrooms</li>
+                            <li>✔ Kitchenette</li>
+                            <li>✔ Dining Area</li>
+                        </ul>
+
+                        <br>
+
+                        <span>$350 / Night</span>
+
+                        <br><br>
+
+                        <a href="booking.html"
+                           class="btn-primary">
+                            Book Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- ROOM 6 -->
+
+                <div class="room-card suite">
+
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+
+                    <div class="room-content">
+
+                        <h3>Presidential Suite</h3>
+
+                        <p>
+                            The most luxurious experience
+                            offered by Amour Hotel.
+                        </p>
+
+                        <ul>
+                            <li>✔ Private Lounge</li>
+                            <li>✔ Butler Service</li>
+                            <li>✔ Premium View</li>
+                        </ul>
+
+                        <br>
+
+                        <span>$650 / Night</span>
+
+                        <br><br>
+
+                        <a href="booking.html"
+                           class="btn-primary">
+                            Book Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>
+                Luxury Awaits You
+            </h2>
+
+            <a href="booking.html"
+               class="hero-btn">
+                Reserve Your Room
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <h3>Amour Hotel</h3>
+
+            <p>
+                Premium Hospitality & Luxury Experience
+            </p>
+
+            <p>
+                info@amourhotel.com
+            </p>
+
+            <p>
+                +880 1234 567890
+            </p>
+
+            <p>
+                © 2026 Amour Hotel
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="js/api.js"></script>
+<script src="js/rooms.js"></script>
+
+</body>
+</html>

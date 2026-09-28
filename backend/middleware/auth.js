@@ -1,0 +1,3 @@
+const jwt=require('jsonwebtoken'); const User=require('../models/User');
+exports.protect=async(req,res,next)=>{try{const h=req.headers.authorization||''; if(!h.startsWith('Bearer '))return res.status(401).json({message:'Authentication required'}); const token=h.slice(7); const decoded=jwt.verify(token,process.env.JWT_SECRET||'dev-secret-change-me'); const user=await User.findById(decoded.id); if(!user)return res.status(401).json({message:'User no longer exists'}); req.user=user; next();}catch(e){res.status(401).json({message:'Invalid or expired token'});}};
+exports.authorize=(...roles)=>(req,res,next)=>roles.includes(req.user.role)?next():res.status(403).json({message:'You are not authorized for this action'});

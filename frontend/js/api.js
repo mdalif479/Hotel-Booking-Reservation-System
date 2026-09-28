@@ -1,0 +1,4 @@
+const API_BASE='http://localhost:5002/api';
+const auth={get token(){return localStorage.getItem('authToken')||''},get user(){try{return JSON.parse(localStorage.getItem('currentUser'))}catch{return null}},set(token,user){localStorage.setItem('authToken',token);localStorage.setItem('currentUser',JSON.stringify(user))},clear(){localStorage.removeItem('authToken');localStorage.removeItem('currentUser')}};
+async function api(path,options={}){const headers={'Content-Type':'application/json',...(options.headers||{})};if(auth.token)headers.Authorization=`Bearer ${auth.token}`;const res=await fetch(`${API_BASE}${path}`,{...options,headers});let data={};try{data=await res.json()}catch{}if(!res.ok)throw new Error(data.message||`Request failed (${res.status})`);return data}
+function requireLogin(){if(!auth.token){alert('Please login first.');location.href='login.html';return false}return true}function logout(){auth.clear();location.href='login.html'}

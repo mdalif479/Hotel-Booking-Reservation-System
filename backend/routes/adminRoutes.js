@@ -1,0 +1,1 @@
+const router=require('express').Router();const c=require('../controllers/adminController');const {protect,authorize}=require('../middleware/auth');router.use(protect,authorize('admin','superuser'));router.get('/dashboard',c.dashboard);router.get('/users',c.users);router.patch('/users/:id/role',c.setRole);router.get('/audit',c.audit);module.exports=router;
